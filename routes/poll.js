@@ -3,7 +3,7 @@ const Pusher = require('pusher');
 
 const router = express.Router();
 
-const pusher = new Pusher({
+var pusher = new Pusher({
     appId: '489907',
     key: '52477b0c09ca20a90228',
     secret: '41da03e4f52be6e006b2',
