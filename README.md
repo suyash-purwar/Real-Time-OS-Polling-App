@@ -30,4 +30,4 @@
 
 ### Give me a STAR!!
 
-###### If you link this project, don't forget to star this project.
+###### If you like this project, don't forget to star this project.
