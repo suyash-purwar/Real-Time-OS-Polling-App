@@ -15,7 +15,7 @@ var pusher = new Pusher({
 });
 
 router.get('/', (req, res) => {
-    res.send('Polling json data');
+    Vote.find().then(votes => res.json({success: true, votes: votes}));
 });
 
 router.post('/', (req, res) => {
@@ -37,6 +37,6 @@ router.post('/', (req, res) => {
     });
 
     
-})
+});
 
 module.exports = router;
