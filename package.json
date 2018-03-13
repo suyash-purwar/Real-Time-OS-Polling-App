@@ -8,6 +8,9 @@
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
+  "engines": {
+    "node": "8.10.0"
+  },
   "author": "Suyash Purwar",
   "license": "MIT",
   "dependencies": {
