@@ -30,7 +30,7 @@ fetch('http://localhost:3000/poll')
     .then(res => res.json())
     .then(data => {
         const votes = data.votes;
-        const totalVotes = votes.length;
+        let totalVotes = votes.length;
 
         const voteCounts = votes.reduce((pre, cur) => ((pre[cur.os] = (pre[cur.os] || 0) + parseInt(cur.points)), pre), {});
 
@@ -48,7 +48,7 @@ fetch('http://localhost:3000/poll')
                 animationEnabled: true,
                 theme: "theme1",
                 title: {
-                    text: totalVotes
+                    text: 'OS Results'
                 },
                 data: [
                     {
