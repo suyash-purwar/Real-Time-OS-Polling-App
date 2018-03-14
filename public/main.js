@@ -8,7 +8,7 @@ function getVoteAndSendToNode() {
             os: choice
         }
 
-        fetch('/poll', {
+        fetch('/poll' || 'localhost://27017/poll', {
             method: 'post',
             body: JSON.stringify(data),
             headers: new Headers({
@@ -26,7 +26,7 @@ function getVoteAndSendToNode() {
 getVoteAndSendToNode();
 
 
-fetch('/poll')
+fetch('/poll' || 'localhost://poll')
     .then(res => res.json())
     .then(data => {
         const votes = data.votes;
@@ -58,9 +58,6 @@ fetch('/poll')
                 ]
             });
             chart.render();
-            
-            // Enable pusher logging - don't include this in production
-            Pusher.logToConsole = true;
         
             var pusher = new Pusher('52477b0c09ca20a90228', {
                 cluster: 'ap2',
