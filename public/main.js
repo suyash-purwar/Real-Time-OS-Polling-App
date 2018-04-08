@@ -8,7 +8,7 @@ function getVoteAndSendToNode() {
             os: choice
         }
 
-        fetch('/poll' || 'localhost://27017/poll', {
+        fetch('../routes/poll', {
             method: 'post',
             body: JSON.stringify(data),
             headers: new Headers({
@@ -26,7 +26,7 @@ function getVoteAndSendToNode() {
 getVoteAndSendToNode();
 
 
-fetch('/poll' || 'localhost://poll')
+fetch('../routes/poll')
     .then(res => res.json())
     .then(data => {
         const votes = data.votes;
