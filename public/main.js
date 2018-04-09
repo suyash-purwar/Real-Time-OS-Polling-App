@@ -1,32 +1,29 @@
-function getVoteAndSendToNode() { 
-    const form = document.getElementById('vote-form');
 
-    form.addEventListener('submit', (e) => {
-        const choice = document.querySelector('input[name=os]:checked').value;
+const form = document.getElementById('vote-form');
 
-        const data = {
-            os: choice
-        }
+form.addEventListener('submit', (e) => {
+    const choice = document.querySelector('input[name=os]:checked').value;
 
-        fetch('https://fast-depths-22674.herokuapp.com/poll', {
-            method: 'post',
-            body: JSON.stringify(data),
-            headers: new Headers({
-                'Content-Type': 'application/json'
-            })
+    const data = {
+        os: choice
+    }
+
+    fetch('http://fast-depths-22674.herokuapp.com/poll', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: new Headers({
+            'Content-Type': 'application/json'
         })
-            .then(res => res.json())
-            .then(data => console.log(data))
-            .catch(err => console.log(err));
+    })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
 
-        e.preventDefault();
-    });
-}
-
-getVoteAndSendToNode();
+    e.preventDefault();
+});
 
 
-fetch('https://fast-depths-22674.herokuapp.com/poll')
+fetch('http://fast-depths-22674.herokuapp.com/poll')
     .then(res => res.json())
     .then(data => {
         const votes = data.votes;
