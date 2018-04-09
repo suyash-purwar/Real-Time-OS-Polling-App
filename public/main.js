@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
         os: choice
     }
 
-    fetch('http://fast-depths-22674.herokuapp.com/poll', {
+    fetch('https://fast-depths-22674.herokuapp.com/poll', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: new Headers({
@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
 });
 
 
-fetch('http://fast-depths-22674.herokuapp.com/poll')
+fetch('https://fast-depths-22674.herokuapp.com/poll')
     .then(res => res.json())
     .then(data => {
         const votes = data.votes;
