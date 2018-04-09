@@ -8,7 +8,7 @@ function getVoteAndSendToNode() {
             os: choice
         }
 
-        fetch('/poll', {
+        fetch('https://fast-depths-22674.herokuapp.com/poll', {
             method: 'post',
             body: JSON.stringify(data),
             headers: new Headers({
@@ -26,7 +26,7 @@ function getVoteAndSendToNode() {
 getVoteAndSendToNode();
 
 
-fetch('/poll')
+fetch('https://fast-depths-22674.herokuapp.com/poll')
     .then(res => res.json())
     .then(data => {
         const votes = data.votes;
