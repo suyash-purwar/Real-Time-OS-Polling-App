@@ -2,7 +2,7 @@
 
 ###### This is a real time OS polling application with CORS mechanism.
 
-### Technologies behind it :-
+### Technical Related :-
 
 * HTML
 * CSS
@@ -22,7 +22,11 @@
 
 ### How to use it ?
 
-###### It's incredibly simple! Open your terminal. Install all the dependencies which are required to make run this application. After the installation of all dependencies, write ``` npm run dev ```. Congrats! Application is started.
+* Open your terminal and clone this project
+* Run ```npm install```
+* Then run ```npm run dev```
+* Open your browser and type ```localhost:3000```
+* Congrats! Website is up on port 3000
 
 ### Credits
 
