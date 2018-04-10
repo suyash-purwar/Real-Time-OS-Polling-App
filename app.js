@@ -19,6 +19,7 @@ app.use(cors());
 const port = process.env.PORT || 3000;
 
 // Routes
+console.log(process.env.MONGOLAB_URI)
 app.use('/poll', poll);
 
 // Start server
