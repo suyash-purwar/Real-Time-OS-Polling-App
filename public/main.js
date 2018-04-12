@@ -49,7 +49,7 @@ fetch('/poll')
                 },
                 data: [
                     {
-                       type: "column",
+                       type: "pie",
                        dataPoints: dataPoints
                     }
                 ]
