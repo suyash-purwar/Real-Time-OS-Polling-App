@@ -6,25 +6,20 @@ $(document).ready(function(){
     });
 });
 
+const data = {};
+document.getElementById('vote-form').addEventListener('submit', (e) => {
+    $('.modal').modal('open')
 
-const form = document.getElementById('vote-form');
+    console.log('kjlf')
+    data.os = document.querySelector('input[name=os]:checked').value; // Querying the choice
+    e.preventDefault();
+});
 
-form.addEventListener('submit', (e) => {
-    console.log('gel')
+document.getElementById('whyForm').addEventListener('submit', (e) => {
+    data.reason = document.querySelector('input[name=reason]').value;
 
-    const choice = document.querySelector('input[name=os]:checked').value; // Querying the choice
-    let data = {  // Data to be sended to mLAB
-        os: choice
-    }
-
-    console.log(data)
-
-    document.getElementById("whyForm").addEventListener('submit', (event) => {
-        data.reason = document.querySelector('input[name=reason]').value; // Added reason prop in data object
-    });
-
-    
-
+    // Send the POST request to poll.js file 
+    // For saving vote and mainpulation DOM
     fetch('/poll', {
         method: 'POST',
         body: JSON.stringify(data),
@@ -32,13 +27,11 @@ form.addEventListener('submit', (e) => {
             'Content-Type': 'application/json'
         })
     })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err));
-
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
     e.preventDefault();
-});
-
+})
 
 fetch('/poll')
     .then(res => res.json())
@@ -62,10 +55,11 @@ fetch('/poll')
                 animationEnabled: true,
                 theme: "theme1",
                 title: {
+                    text: "Results"
                 },
                 data: [
                     {
-                       type: "pie",
+                       type: "doughnut",
                        dataPoints: dataPoints
                     }
                 ]
