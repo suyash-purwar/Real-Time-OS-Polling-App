@@ -24,7 +24,8 @@ router.post('/', (req, res) => {
 
     const vote = new Vote({
         points: 1,
-        os: req.body.os
+        os: req.body.os,
+        reason: req.body.reason
     })
     
     vote.save().then((vote) => {

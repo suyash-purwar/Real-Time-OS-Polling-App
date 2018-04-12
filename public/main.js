@@ -1,12 +1,29 @@
+// For modal
+$(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal({
+        dismissible: false
+    });
+});
+
 
 const form = document.getElementById('vote-form');
 
 form.addEventListener('submit', (e) => {
-    const choice = document.querySelector('input[name=os]:checked').value;
+    console.log('gel')
 
-    const data = {
+    const choice = document.querySelector('input[name=os]:checked').value; // Querying the choice
+    let data = {  // Data to be sended to mLAB
         os: choice
     }
+
+    console.log(data)
+
+    document.getElementById("whyForm").addEventListener('submit', (event) => {
+        data.reason = document.querySelector('input[name=reason]').value; // Added reason prop in data object
+    });
+
+    
 
     fetch('/poll', {
         method: 'POST',
@@ -45,7 +62,6 @@ fetch('/poll')
                 animationEnabled: true,
                 theme: "theme1",
                 title: {
-                    text: 'OS Results'
                 },
                 data: [
                     {

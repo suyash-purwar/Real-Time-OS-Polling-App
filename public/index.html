@@ -8,6 +8,23 @@
     <title>OS Poll</title>
 </head>
 <body>
+
+    <div id="whyModal1" class="modal">
+        <div class="modal-content">
+            <h4>Tell us why</h4>
+            <p>PLease tell us why u choose this OS. What are the benefits you like with OS ? Tell us everything you like about this OS ?</p>
+
+            <form id = "whyForm">
+                <div class = "input-field">
+                    <input type = "text" name = "reason" class = "validate" id = "reason" placeholder="Tell us why ??">
+                </div>
+
+                <input type = "button" value = "Submit" class = "modal-action modal-close btn pulse">
+            </form>
+        </div>
+    </div>
+
+
     <div class="container">
         <div class = "row">
             <div class = "col s12 m6 l6">
@@ -34,7 +51,9 @@
                         <label for = "Others">Others</label>
                     </p>
 
-                    <input type="submit" value="Vote" class = "btn pulse">
+                    <br><br>
+
+                    <input type="submit" value="Vote" class = "btn pulse modal-trigger" href = "#whyModal1">
                 </form>
             </div>
 

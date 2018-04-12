@@ -9,6 +9,11 @@ const votingSchema = mongoose.Schema({
     points: {
         type: String,
         required: true
+    },
+
+    reason: {
+        type: String,
+        required: true
     }
 });
 
