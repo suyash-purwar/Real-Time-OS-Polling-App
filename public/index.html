@@ -12,31 +12,37 @@
         <h1>OS Vote</h1>
         <p>Vote for your favourite OS to develop on</p>
 
-        <form id="vote-form">
-            <p>
-                <input type="radio" name="os" id="windows" value = "Windows">
-                <label for = "windows">Windows</label>
-            </p>
+        <div class = "row">
+            <div class = "col s12 m6 l6">
+                <form id="vote-form">
+                    <p>
+                        <input type="radio" name="os" id="windows" value = "Windows">
+                        <label for = "windows">Windows</label>
+                    </p>
 
-            <p>
-                <input type="radio" name="os" id="macOS" value="MacOS">
-                <label for = "macOS">MacOS</label>
-            </p>
+                    <p>
+                        <input type="radio" name="os" id="macOS" value="MacOS">
+                        <label for = "macOS">MacOS</label>
+                    </p>
 
-            <p>
-                <input type="radio" name="os" id="linux" value = "Linux">
-                <label for = "linux">Linux Distro</label>
-            </p>
+                    <p>
+                        <input type="radio" name="os" id="linux" value = "Linux">
+                        <label for = "linux">Linux Distro</label>
+                    </p>
 
-            <p>
-                <input type="radio" name="os" id="Others" value = "Others">
-                <label for = "Others">Others</label>
-            </p>
+                    <p>
+                        <input type="radio" name="os" id="Others" value = "Others">
+                        <label for = "Others">Others</label>
+                    </p>
 
-            <input type="submit" value="Vote" class = "btn pulse">
-        </form>
+                    <input type="submit" value="Vote" class = "btn pulse">
+                </form>
+            </div>
 
-        <div id = "chartContainer" style = "height: 500px; width: 100%"></div>
+            <div class = "col s12 s6 l6">
+                <div id = "chartContainer" style = "height: 500px; width: 100%"></div>
+            </div>
+        </div>
     </div>
     
     
