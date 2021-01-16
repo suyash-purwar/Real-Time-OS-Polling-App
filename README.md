@@ -1,16 +1,19 @@
-# __OS polling application__
+# Your favourite Opertaing System polling application
 
-###### This is a real time OS polling application with CORS mechanism.
+A real time application for voting your favourite operating system. This shows the result of the polls instantly after voting and it does so by showing aesthetic visuals. 
 
-### Technical Related :-
+### Frontend Stack
 
 * HTML
 * CSS
 * JavaScript
-* NodeJS
-* ExpressJS
 * Materializecss
 * CanvasJS
+
+### Backend Technology
+
+* NodeJS
+* ExpressJS
 * Pusher API
 * MongoDB
 
@@ -30,8 +33,4 @@
 
 ### Credits
 
-###### I would really like to thank my mentor [Brad Traversy](https://github.com/bradtraversy). He is amazing coder and also a great teacher. Subscirbe to his channel on youtube, [Travresy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA).
-
-### Give me a STAR!!
-
-###### If you like this project, don't forget to star this project.
+I want to thank my mentor [Brad Traversy](https://github.com/bradtraversy) for his informating and impactful tutorials on full-stack development. Subscirbe to his channel on youtube, [Travresy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA).
