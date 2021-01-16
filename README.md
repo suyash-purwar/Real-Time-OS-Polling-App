@@ -17,13 +17,13 @@ A real time application for voting your favourite operating system. This shows t
 * Pusher API
 * MongoDB
 
-### Features :-
+### Features
 
 * Uses Cross-Origin Resource Sharing mechanism
 * Graphical representation of votes
 * Bold look
 
-### How to use it ?
+### Instructions to run this app in a local system
 
 * Open your terminal and clone this project
 * Run ```npm install```
